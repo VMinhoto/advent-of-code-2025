@@ -2,7 +2,7 @@ package Day02
 
 import println
 import readInput
-import kotlin.system.measureTimeMillis
+import kotlin.time.measureTime
 
 fun main() {
     fun part1(input: List<String>): Long {
@@ -53,13 +53,13 @@ fun main() {
 
     // Read the input from the `src/Day02.txt` file.
     val input = readInput("Day02/Day02")
-    val time1 = measureTimeMillis {
+    val time1 = measureTime {
         part1(input)
     }
-    val time2 = measureTimeMillis {
+    val time2 = measureTime {
         part2(input)
     }
-    println("Time taken fun 1: ${time1}ms; Time taken fun 2: ${time2}ms")
+    println("Time taken fun 1: $time1; Time taken fun 2: $time2")
     part1(input).println()
     part2(input).println()
 }
