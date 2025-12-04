@@ -2,13 +2,12 @@ package Day03
 
 import println
 import readInput
-import kotlin.system.measureTimeMillis
 import kotlin.time.measureTime
 
 fun main() {
     fun part1(input: List<String>): Int {
         var result: Int = 0
-        input.forEach{ battery ->
+        result = input.sumOf{ battery ->
             var left: Int = -1
             val string: StringBuilder = StringBuilder()
             val batteryLength: Int = battery.length
@@ -18,14 +17,14 @@ fun main() {
                 left = battery.indexOf(maxLeft,left+1)
                 string.append(maxLeft)
             }
-            result += string.toString().toInt()
+            string.toString().toInt()
         }
         return result
     }
 
     fun part2(input: List<String>): Long {
         var result: Long = 0
-        input.forEach{ battery ->
+        result = input.sumOf{ battery ->
             var left: Int = -1
             val string: StringBuilder = StringBuilder()
             val batteryLength: Int = battery.length
@@ -35,7 +34,7 @@ fun main() {
                 left = battery.indexOf(maxLeft,left+1)
                 string.append(maxLeft)
             }
-            result += string.toString().toLong()
+            string.toString().toLong()
         }
 
         return result
